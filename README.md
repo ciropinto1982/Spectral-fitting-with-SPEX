@@ -3,4 +3,4 @@ This folder contains my codes that perform broadband modelling and line detectio
 
 - SPEX_fit_example.com is a simple SPEX executable that can be edited and then loaded into SPEX typing "log exe SPEX_fit_example". This loads a data spectrum, creates the model and fits the model to the data and plots them all.
 
-- Trafo-conversion-to-SPEX-format.sh is a simple example that shows how to run trafo auxiliary task of SPEX directly from command line or via shell scripts in order to convert standard OGIP FITS spectra to SPEX format.
+- Convert-spectra-to-SPEX-format directory contains a few simple examples that run TRAFO auxiliary task of SPEX directly from command line or via shell scripts in order to convert standard OGIP FITS spectra to SPEX format.

@@ -14,6 +14,9 @@
 ### 13) if available (=yes) then 14) provide also the ancilliary file for the effective area (ARF).
 ### then 15) enter any shift in bins (0 recommended) and finally
 ### 16) the names of the output spectrum (source & background) and response in SPEX format.
+###
+### For each spectrum, TRAFO will create .SPO and .RES files for the spectrum and the response
+### with all the required information. They are loaded into SPEX with "data resp_file(.RES) spec_file(.SPO)"
 
 echo "Converting ungrouped EPIC-PN spectrum to SPEX format:"
 

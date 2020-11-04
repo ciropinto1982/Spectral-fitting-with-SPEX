@@ -52,7 +52,7 @@
  p cap x lw 3
  p
  
-### Step 3: adopt a distance for your source, e.g. 3.3 Megaparsec
+### Step 3: adopt a distance for your source, e.g. 1.9 Kiloparsec
   
  dist 1.9 kpc
 

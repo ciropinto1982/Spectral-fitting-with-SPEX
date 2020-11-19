@@ -1,7 +1,5 @@
 #!/bin/ksh
 
-echo "This code reads the list of sources and for each of them runs SPEX in loop."
-
 ########################################## ROUTINE DESCRIPTION #######################################################
 ####                                                                                                              ####
 #### This script runs SPEX over different sources and combinations of AMOL comounds, the basic code does this:    ####

@@ -3,6 +3,7 @@
 echo "This code reads the list of sources and for each of them runs SPEX in loop."
 
 ########################################## ROUTINE DESCRIPTION #######################################################
+####                                                                                                              ####
 #### This script runs SPEX over different sources and combinations of AMOL comounds, the basic code does this:    ####
 ####                                                                                                              ####
 #### 1) Read the source names from a list stored inside an ascii file: source name is equal to spectrum file name ####

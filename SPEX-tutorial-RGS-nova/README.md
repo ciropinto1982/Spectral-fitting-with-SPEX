@@ -1,6 +1,7 @@
 Tutorial for RGS spectral fits with SPEX 
 
 0) Download SPEX from link below. You’ll need XQUARTZ or X11 for plotting windows.
+
    The link will provide installer, manuals and cookbooks.
 
 https://www.sron.nl/astrophysics-spex

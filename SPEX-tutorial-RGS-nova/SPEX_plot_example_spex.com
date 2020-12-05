@@ -57,7 +57,7 @@ p
 plot de cps spex_plot.ps
 plot
 plot clo 2
-
+ 
 ### Convert POSTSCRIPT to PDF and open it (via "system execute")
 
 system exe "ps2pdf spex_plot.ps"

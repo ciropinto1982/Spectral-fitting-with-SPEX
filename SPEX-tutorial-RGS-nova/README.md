@@ -13,9 +13,7 @@ https://github.com/ciropinto1982/Spectral-fitting-with-SPEX
 
 http://nxsa.esac.esa.int/nxsa-web/#search
 
-Source name: V2491 Cygni
-ObservationID: 0552270501
-Download spectra: RGS (PPS)
+Source name: V2491 Cygni, Observation ID: 0552270501, Download spectra: RGS (PPS)
 
 3) Convert OGIP-FITS spectra and responses to SPEX SPO/RES format with TRAFO
 

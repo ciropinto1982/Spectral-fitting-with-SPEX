@@ -269,4 +269,4 @@ plot clo 2
 system exe "ps2pdf spex_fits.ps"
 system exe "open spex_fits.pdf"
 
-### To close SPEX type: "quit"
+### To close SPEX type: "quit" 

@@ -60,7 +60,7 @@ plot clo 2
 
 quit
 EOF
-
+ 
 ### Convert POSTSCRIPT to PDF and open it
 
 ps2pdf spex_plot.ps

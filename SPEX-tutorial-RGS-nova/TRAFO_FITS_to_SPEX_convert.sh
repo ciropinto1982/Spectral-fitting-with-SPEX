@@ -30,7 +30,7 @@
 ### SPEX does not modify pre-existing SPO/RES files.
 ### If needed, use different output names or delete the pre-existing SPO/RES before running TRAFO.
 
-echo "Converting ungrouped RGS spectra to SPEX format: first order RGS spectra"
+echo "Converting ungrouped RGS spectra to SPEX format: first order RGS spectra" 
 
 trafo << EOF
 1

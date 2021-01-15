@@ -30,7 +30,7 @@ import math
 
 outdir="./"
 
-c=3.0e5        # lightspeed in km/s
+c=3.0e5        # lightspeed in km/s 
 
 Emin_RGS=0.3   # keV
 Emax_RGS=2.0   # keV

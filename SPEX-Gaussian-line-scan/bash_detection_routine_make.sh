@@ -4,7 +4,7 @@
 ###
 ### INFO: bash script that creates a line-detection routine to run into SPEX
 ###
-### - read energy centroi grid in Log_E_grid_0310keV_100kms.txt
+### - read energy centroi grid in Log_E_grid_0310keV_100kms.txt 
 ### - calculate the FWHM at each energy centroid for a given velocity dispersion
 ### - update the routine: move the gaussian along the energy grid and update the FWHM, fit and save the parameters
 ###

@@ -7,4 +7,6 @@ This folder contains my codes that perform broadband modelling and line detectio
 
 - /Convert-spectra-to-SPEX-format/ directory contains a few simple examples that run TRAFO auxiliary task of SPEX directly from command line or via shell scripts in order to convert standard OGIP FITS spectra to SPEX format.
 
+- /SPEX-tutorial-RGS-nova/ provide a full tutorial to download XMM/RGS spectra, convert them to SPEX and fit them with SPEX with photoionised gas absorption models.
+
 The readers are recommended to refer to the SPEX manual https://www.sron.nl/astrophysics-spex/manual and the very useful SPEX cookbook filled with practical examples of how to run SPEX http://var.sron.nl/SPEX-doc/cookbookv3.00.00.pdf. SPEX can be downloaded from https://www.sron.nl/astrophysics-spex

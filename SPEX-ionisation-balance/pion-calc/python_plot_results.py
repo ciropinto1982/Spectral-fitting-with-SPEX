@@ -25,7 +25,7 @@ log_xi,T, cs ,HCS ,HFF ,HPE ,HCI ,HAE ,CIC ,CEI ,CRE ,CFF ,CCE ,HTOT ,CTOT = np.
 
 #-------------- Heating / cooling rates curves ----------------------------------
 
-# Remember to conver to erg/s/cm**3 (i.e. W/m**3*10.)
+# Remember to conver to erg/s/cm**3 (i.e. W/m**3*10.) 
 
 plt.rcParams.update({'font.size': 24})
 plt.figure(figsize=(18,12))

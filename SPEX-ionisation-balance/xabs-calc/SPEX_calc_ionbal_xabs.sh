@@ -9,6 +9,8 @@
 ### Manual:   http://var.sron.nl/SPEX-doc/manualv3.02/manual.html
 ### Cookbook: http://var.sron.nl/SPEX-doc/cookbookv3.0/cookbook.html
 ### Minihelp: https://www.sron.nl/plugins/content/moskt/Browse.php?fDocumentId=87435
+###
+### xabsinput: https://spex-xray.github.io/spex-help/tools/xabsinput.html
 
 ### Step 0: make sure you know where SPEX is poiting (type e.g. "which spex" or "which xabsinput")
 ###
@@ -27,6 +29,10 @@
 ###
 ### xabsinput will iterate over log_xi from -8.5 to +6.5 with a step of log_xi = 0.1
 ### at the lowest log_xi (e.g. from )
+###
+### IMPORTANT: To have a sufficiently broad energy band, xabsinput adds a value of 10^{-10} at energies of 10^{-8} and 10^9 Ryd. 
+###            Take care that the SED scaling would essentially imply 10^{-10} to be a very small value. 
+###            The energies in the file should be in increasing order, and within the 10^{-8} and 10^9 Ryd interval.
 
 SED=SED_ngc1313_Ry_Jy_ge1024bin.dat
 ABU=abundances.txt

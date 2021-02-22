@@ -27,6 +27,7 @@
 ###    calculation by commenting the corresponding lines in the code (see below) to be more accurate.
 ###
 ### 4) The routine adopts a grid of log xi, velocity shift (zv), turbulence (width), and fits the NH
+###    Here Solar abundances are adopted, but additional subgrid could be implemented for non-Solar Z.
 ###
 ### 5) Steps: A) create the grid routine with SPEX commands for the chosed parameter space,
 ###           B) call SPEX, load data and bestfit (continuum) model and add the xabs on top of it.

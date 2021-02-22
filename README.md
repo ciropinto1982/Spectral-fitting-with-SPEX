@@ -9,6 +9,8 @@ This folder contains my codes that perform broadband modelling and line detectio
 
 - /SPEX-ionisation-balance/ directory provides detail calculation of ionisation balance particularly for photoionised gas crucial for winds.
 
+- /SPEX-physical-grid-scan/ directory provides detail modellisation and physical model scans implementing multiple line fits with physical plasma models.
+
 - /SPEX-simple-fits/ directory contains simple SPEX executable files that can be edited and then loaded into SPEX typing "log exe SPEX_fit_example" or command-by-command. These routines enable to interactivelt fit one or more spectra simultaneously. Each executable files loads observed spectra, creates the spectral model and fits the model to the data, and plots them all.
 
 - /SPEX-tutorial-RGS-nova/ provide a full tutorial to download XMM/RGS spectra, convert them to SPEX and fit them with SPEX with photoionised gas absorption models.

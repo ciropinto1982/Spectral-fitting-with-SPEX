@@ -2,7 +2,7 @@
 
 ######################################################################################################
 ###
-### SPEX scan photoionisation absorption models over a grid in the parameter space
+### SPEX scan photoionisation absorption models over a grid in the parameter space 
 ###
 ### Do not forget to open a screen session if you want it to run in background.
 ###

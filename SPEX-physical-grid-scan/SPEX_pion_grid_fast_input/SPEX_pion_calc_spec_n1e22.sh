@@ -26,8 +26,8 @@
 ###
 ### 4) The routine adopts a grid of log xi, velocity shift = 0, turbulence (width), and NH (cm^-2)
 ###    Here Solar abundances are adopted, but additional subgrid could be implemented for non-Solar Z.
-###    NOTE there is a simpler version of this code that creates pion emission spectral models only
-###    for NH = 1e22 cm^-2 (SPEX_pion_calc_spec_n1e22.sh). This is because at low electron densities
+###    IMPORTANT this is a much simpler version that creates pion emission spectral models only for NH=
+###    1e22 cm^-2 (compared to SPEX_pion_calc_spec_grids.sh). This is because at low electron densities
 ###    the NH of pion will be proportional to the spectral model overall normalisation and one could
 ###    calculate 1 NH for every log xi and then, once loaded in SPEX, fit the overall normalisation.
 ###    This is very useful if one is primarily interested in the contours of log xi and velocity.
@@ -135,7 +135,7 @@ fi
 
 Log_nh=($(seq ${nh_min} 0.1 ${nh_max}))      # Array of values between ${nh_min} and ${nh_max}
 
-echo "Available NH grid points = ${#Log_nh[@]}"
+#echo "Available NH grid points = ${#Log_nh[@]}"
 
 #echo "SPEX calc ${type} for Log_xi = ${xi} : NH_min = ${nh_min} ... NH_max = ${nh_max}"
 
@@ -152,13 +152,13 @@ hd_index=${hd_val} # import the chosen hydrogen volume / electron density (in SP
 
 hd=10.**hd_index   # H_density chosen to SPEX default (1 cm-3) as faster and not huge changes seen.
 
-Log_NH=np.arange(${nh_min},${nh_max},${nh_step}) # define the correct log nh ranges
+Log_NH=np.arange(${nh_min},${nh_max},${nh_step})
 
 np.savetxt('${FILE1_log_nh}',Log_NH,delimiter=' ',fmt='%1.1f')
 
 NH=10**(Log_NH-24)
 
-np.savetxt('${FILE2_val_nh}',NH,delimiter=' ',fmt='%1.5f') # compute the NH value for SPEX pion input
+np.savetxt('${FILE2_val_nh}',NH,delimiter=' ',fmt='%1.5f')
 
 EOF
 
@@ -187,7 +187,7 @@ echo "First Loop on Line Widths of ${type}:"
 for width in ${line_width} # 100 500 1000 2500 5000 # Loop 1 throughout line widht (SPEX km/s)
 do
 
-routine_file_in_spex=pion_calc_routine_v${width}
+routine_file_in_spex=pion_calc_routine_v${width}_nh22 # changing routine name for NH=1e22cm-2 alone
 
 routine_file=${routine_file_in_spex}.com
 
@@ -228,23 +228,27 @@ echo " "                                                                    >> $
 
 ### Different calling for NH to load value but save output as log-of-the-value
 ### Storing NH values and log-of-the-values into 2 arrays
+###
+### The commands below are different with respect to "SPEX_pion_calc_spec_grids.sh"
+### Here we choose only NH = 1e22 cm^-2. If you uncomment the lines and remove "1e-2","22.0"
+### you will end up in calculating pion for all NH given a certain log xi range.
 
 index_NH=0
 
-for temp_value in `cat ${DIR}/log_nh_grids_per_log_xi/val_nh_grid_log_xi_${xi}.txt`
+for temp_value in 1e-2 # `cat ${DIR}/log_nh_grids_per_log_xi/val_nh_grid_log_xi_${xi}.txt`
  do
  nh_Val[${index_NH}]=${temp_value}
 #  echo Loading NH value: ${nh_Val[${index_NH}]} # loading NH in SPEX units for the pion input
- index_NH=$(($index_NH+1))
+# index_NH=$(($index_NH+1))
 done
 
 index_NH=0
 
-for temp_value in `cat ${DIR}/log_nh_grids_per_log_xi/log_nh_grid_log_xi_${xi}.txt`
+for temp_value in 22.0 # `cat ${DIR}/log_nh_grids_per_log_xi/log_nh_grid_log_xi_${xi}.txt`
  do
  nh_Log[${index_NH}]=${temp_value}
 #  echo Loading NH LogVal ${nh_Log[${index_NH}]} # loading NH in log nh units for the filename
- index_NH=$(($index_NH+1))
+# index_NH=$(($index_NH+1))
 done
 
 index_NH=0
@@ -255,7 +259,7 @@ index_NH=0
 
   number_NH=$(echo "${number_NH}-1" | bc -l)  # Subtract 1 as array starts from element 0
 
-   for index_NH in $(seq 0 1 ${number_NH})    # NH in SPEX units of x 1e24 cm-2 (i.e. 1e28 m-2)
+   for index_NH in 0 # $(seq 0 1 ${number_NH})    # in SPEX units of x 1e24 cm-2 (i.e. 1e28 m-2)
     do
 
  nh=${nh_Val[${index_NH}]}
@@ -389,7 +393,7 @@ q
 
 EOF
 
-########### 3. ROUTINE EXE : IDL - CONVERT PION QDP OUTPUT TO SPEX FILE MODEL INPUT (*.DAT) ##########
+###### 3. ROUTINE EXE : IDL - CONVERT PION QDP OUTPUT TO SPEX FILE MODEL INPUT (*.DAT) #####
 
 cd ${DIR}
 
@@ -414,4 +418,4 @@ mv PION_*.qdp.dat ${DIR}/file_spex_cor/
 cd ${DIR}
 
 
-###################################### END OF THE ROUTINE ############################################
+##############################################################################################

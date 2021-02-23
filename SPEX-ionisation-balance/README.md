@@ -11,3 +11,8 @@ Two different approches are considered depending on the requirements: instantane
 
 - xabs-calc / SPEX_calc_ionbal_xabs.sh runs the photoionisation calculation with XABSINPUT
 - xabs-calc / python_plot_ionbal.py reads the results and make plots
+
+
+License: This public code was developed for and published in the paper Pinto et al. (2020a),
+    DOI: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P.
+    You're recommended and kindly requested to refer to that paper when using this code.

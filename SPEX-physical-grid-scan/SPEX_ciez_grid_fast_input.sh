@@ -6,7 +6,7 @@
 ###
 ### Do not forget to open a screen session if you want it to run in background.
 ###
-### Launching command (in background): ./SPEX_MC_ciez_grid_part_01_CR.sh > /dev/null 2>&1
+### Launching command (in background): ./SPEX_ciez_grid_fast_input.sh > /dev/null 2>&1
 ###
 ######## 0) REQUIREMENTS - THINGS THAT NEED TO BE KNOWN BEFORE RUNNING THIS ROUTINE ##################
 ###

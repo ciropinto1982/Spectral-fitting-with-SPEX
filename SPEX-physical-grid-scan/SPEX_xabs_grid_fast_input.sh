@@ -38,6 +38,10 @@
 ### 6) OUTPUT: 3 Table files containing the results as delta C-stat or NH for each (xi,zv,width) point
 ###            1 two-column file (with a header) and 2 matrix-files for the DCstat and NH 3D contours.
 ###
+###    License: This public code was developed for and published in the paper Pinto et al. (2020a),
+###        DOI: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P.
+###        You're recommended and kindly requested to refer to that paper when using this code.
+###
 ######################### 1) PARALLELISATION and PARAMETER SPACE #####################################
 
 export OMP_NUM_THREADS=4 # This chooses the number of cores/CPU/threads used.

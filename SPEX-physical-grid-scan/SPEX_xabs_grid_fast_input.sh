@@ -2,7 +2,7 @@
 
 ######################################################################################################
 ###
-### SPEX scans of photoionisation absorption models over a predefined grid in the parameters space 
+### SPEX scans of photoionisation absorption models over a predefined grid in the parameters space
 ###
 ### Do not forget to open a screen session if you want it to run in background.
 ###
@@ -160,8 +160,14 @@ routine_file=${routine_spex}.com        # the COM extension is for file editing 
 
 echo "# SPEX ${type} scan loop on width, xi and zv (NH free)" > ${routine_file}  # build the routine
 echo " "                                                     >> ${routine_file}
-#echo "p fra 1"                                               >> ${routine_file} # uncomment lines
-#echo " "                                                     >> ${routine_file} # to update plots
+#echo "p fra 1"                                              >> ${routine_file}  # uncomment lines
+#echo " "                                                    >> ${routine_file}  # to update plots
+
+# IMPORTANT: Testing (blue-shifted) xabs for following GRIDs
+#
+# Here we assume that we have already added a xabs component to the continuum model such as:
+# 1.hot (ISM absorption), 2.bb, 3.dbb, 4.comt (continuum emission), 5.xabs (PIE-absorption lines)
+# and we have relate them: "com rel 2:4 5,1" i.e. first absorbed by xabs and then Galactic ism (hot)
 
 echo "par 1 ${NC} nh v ${nh_start} "   >> ${routine_file}     # Chose xabs param for a startup model
 echo "par 1 ${NC} xi v ${xi_start} "   >> ${routine_file}
@@ -178,8 +184,8 @@ for j in $(seq ${zv_min} ${zv_step} ${zv_max})  # 3) LOOP OVER ZV_LOS
 
 echo "l e ${startup_model}"                               >> ${routine_file} # xabs initialisation
 echo " "                                                  >> ${routine_file}
-#echo "p cap lt text \" w${width} xi${xi_start} v${k} \" " >> ${routine_file}
-#echo "p cap lt disp t "                                   >> ${routine_file}
+#echo "p cap lt text \" w${width} xi${xi_start} v${k} \" " >> ${routine_file} # uncomment lines
+#echo "p cap lt disp t "                                   >> ${routine_file} # to update plots
 #echo " "                                                  >> ${routine_file}
 echo "par 1 ${NC} nh v ${nh_start}"                       >> ${routine_file} # update xabs paramet.
 echo "par 1 ${NC} xi v ${xi_start}"                       >> ${routine_file}
@@ -224,6 +230,9 @@ done
 #done
 
 ###################### 4) EXECUTION OF THE SPEX ROUTINE FOR THE GRID  ################################
+###
+### At first load data, bestfit continuum model, adding a xabs on top: "log exe ${spex_startup}"
+### Then launch the routine for xabs scanning in the parameters space: "log exe ${routine_spex}"
 
 spex<<EOF
 log exe ${spex_startup}
@@ -252,7 +261,7 @@ else
 # Removing useless lines containing e.g. "<=>" from ${input_file} to save space in your pc!
 
 sed -i '/<->/d'        ${input_file} # If it doesnt work in Linux remove the option -i
-sed -i '/bb/d'         ${input_file} # You might have to add/remove '' ahead option -i
+sed -i '/bb/d'         ${input_file} # You might have to add/remove '' after option -i
 sed -i '/Instrument/d' ${input_file}
 sed -i '/sect/d'       ${input_file}
 sed -i '/Flux/d'       ${input_file}

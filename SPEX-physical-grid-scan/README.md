@@ -6,7 +6,7 @@ These automated codes take advantage from SPEX knowledge of atomic lines cross s
 
 2) SPEX_ciez_grid_fast_input.sh is built on SPEX's model CIE (emission lines from collisionally-ionised plasma).
 
-3) SPEX's model PION (emission and absorption lines from photo-ionised plasma) is yet to be uploaded.
+3) SPEX_pion_grid_fast_input directory has several modules to build SPEX's model PION (emission/absorption lines from photo-ionised plasma).
 
 4) SPEX's model HOT (absorption lines from collisionally-ionised plasma) is yet to be uploaded.
 

@@ -10,4 +10,4 @@ These automated codes take advantage from SPEX knowledge of atomic lines cross s
 
 4) SPEX's model HOT (absorption lines from collisionally-ionised plasma) is yet to be uploaded.
 
-All these codes have been developed for and published in the paper Pinto et al. (2020a, doi: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P). You're recommended and kindly requested to refer to that paper when using this code.
+*License -* All these codes have been developed for and published in the paper Pinto et al. (2020a, doi: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P). You're recommended and kindly requested to refer to that paper when using this code.

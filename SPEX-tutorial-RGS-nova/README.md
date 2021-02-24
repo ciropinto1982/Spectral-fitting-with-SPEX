@@ -33,3 +33,5 @@ or open SPEX and copy/paste individual commands
 SPEX script: log exe SPEX_fits_example_spex (.com is removed)
 
 or open SPEX and copy/paste individual commands
+
+*License -* All these codes have been developed for and published in the paper Pinto et al. (2012b), doi: 10.1051/0004-6361/201117835, arXiv: 1206.2143, bibcode: 2012A&A...543A.134P. You're recommended and kindly requested to refer to that paper when using this code.

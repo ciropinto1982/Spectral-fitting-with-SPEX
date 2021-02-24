@@ -32,7 +32,7 @@
 ###           B) call SPEX, load data and bestfit (continuum) model and add the CIE on top of it.
 ###           C) then launch the grid routine within SPEX and save the fit for each individual point
 ###           D) Finally read C-stat from each fit into a large file containing all the param space
-###              You need to update line 316 with the exact CIE component number (here 5 was adopted)
+###              You need to update line 328 with the exact CIE component number (here 5 was adopted)
 ###
 ### 6) OUTPUT: 3 Table files containing the results as delta C-stat or Norm for each (T,z,width) point
 ###            1 two-column file (with a header) and 2 matrix-files for the DCstat & Norm 3D contours.

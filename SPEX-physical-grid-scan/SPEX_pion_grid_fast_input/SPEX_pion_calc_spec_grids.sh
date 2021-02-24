@@ -40,7 +40,7 @@
 ###              a SPEX file-model input format using IDL, but can edit it using python or other tools
 ###
 ### 6) OUTPUT: grid of pion emiss. models that can be loaded into SPEX file-model & normalisation free
-###            A powerful example of how to use these grids is shown in SPEX_pion_grid_fast_input.sh
+###            A powerful example of how to use these grids is shown in ..........................
 ###
 ### IMPORTANT: this codes also uses PYTHON and IDL. Needs some editing to avoid using one or the other
 ###

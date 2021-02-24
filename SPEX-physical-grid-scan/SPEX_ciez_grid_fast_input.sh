@@ -202,7 +202,7 @@ echo " "                                                        >> ${routine_fil
 echo "com cie"                              >> ${routine_file} # Add CIE emission to the model
 echo "com red"                              >> ${routine_file} # Add redshift component for the CIE
 echo "com rel 2:4 1"                        >> ${routine_file} # Absorb continuum with ISM hot comp
-echo "com rel 5 6,1"                        >> ${routine_file} # Absorb and redshift the CIE component
+echo "com rel 5 6,1"                        >> ${routine_file} # Redshift and absorb the CIE component
 echo " "                                    >> ${routine_file}
 echo "par 1:4 ${NC} no  v ${nh_start}"      >> ${routine_file} # Chose cie param for a startup model
 echo "par 1:4 ${NC} t   v ${xi_start}"      >> ${routine_file}
@@ -269,10 +269,10 @@ echo " fit "                                              >> ${routine_file} # a
 #echo " "                                                  >> ${routine_file}
 #echo "system exe \"rm spex_lower_stat.com\" "             >> ${routine_file} # delete old errors
 echo " "                                                             >> ${routine_file}
-echo "log out ${DIR_outgrid}/${type_model}_${width}_${xi_start}_${k} over" >> ${routine_file} # save
-echo "par sh f"                                                      >> ${routine_file}    # each fit
-echo "log close out"                                                 >> ${routine_file}    # results
-echo " "                                                             >> ${routine_file}
+echo "log out ${DIR_outgrid}/${type_model}_${width}_${xi_start}_${k} over" >> ${routine_file}
+echo "par sh f"                                                      >> ${routine_file} # save
+echo "log close out"                                                 >> ${routine_file} # each fit
+echo " "                                                             >> ${routine_file} # results
 
 done
 
@@ -314,7 +314,7 @@ else
 # Removing useless lines containing e.g. "<=>" from ${input_file} to save space!
 
 sed -i '' '/<->/d'        ${input_file} # If it doesnt work in Linux remove the option -i
-sed -i '' '/bb/d'         ${input_file} # You might have to add/remove '' ahead option -i
+sed -i '' '/bb/d'         ${input_file} # You might have to add/remove '' after option -i
 sed -i '' '/Instrument/d' ${input_file}
 sed -i '' '/sect/d'       ${input_file}
 sed -i '' '/Flux/d'       ${input_file}

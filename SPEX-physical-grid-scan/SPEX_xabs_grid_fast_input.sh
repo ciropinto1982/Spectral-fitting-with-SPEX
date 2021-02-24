@@ -220,10 +220,10 @@ echo " fit "                                              >> ${routine_file} # a
 #echo " "                                                  >> ${routine_file}
 #echo "system exe \"rm spex_lower_stat.com\" "             >> ${routine_file} # delete old errors
 echo " "                                                             >> ${routine_file}
-echo "log out ${DIR_outgrid}/${type}_${width}_${xi_start}_${k} over" >> ${routine_file} # save
-echo "par sh f"                                                      >> ${routine_file} # each fit
-echo "log close out"                                                 >> ${routine_file} # results
-echo " "                                                             >> ${routine_file}
+echo "log out ${DIR_outgrid}/${type_model}_${width}_${xi_start}_${k} over" >> ${routine_file}
+echo "par sh f"                                                      >> ${routine_file} # save
+echo "log close out"                                                 >> ${routine_file} # each fit
+echo " "                                                             >> ${routine_file} # results
 
 done
 

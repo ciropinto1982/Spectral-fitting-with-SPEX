@@ -21,4 +21,4 @@ Order of scripts execution:
     
 2) Launch SPEX_pion_grid_fast_input.sh to perform the photoionised emission scanning
 
-*License -* All these codes have been developed for and published in the paper Pinto et al. (2020a, doi: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P). You're recommended and kindly requested to refer to that paper when using this code.
+*License -* All these codes have been developed for and published in the paper Pinto et al. (2020b), doi: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P. You're recommended and kindly requested to refer to that paper when using this code.

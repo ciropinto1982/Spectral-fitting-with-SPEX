@@ -36,6 +36,4 @@ Output files: results_gaus_1000kms.pdf, ...
 
 https://github.com/ciropinto1982/Spectral-fitting-with-SPEX/tree/master/SPEX-Gaussian-line-scan
 
-License: This public code was developed for and published in the paper Pinto et al. (2018a),
-    DOI: 10.1093/mnras/sty231, arXiv: 1708.09422, bibcode: 2018MNRAS.476.1021P.
-    You're recommended and kindly requested to refer to that paper when using this code.
+*License -* This public code was developed for and published in the paper Pinto et al. (2018a), DOI: 10.1093/mnras/sty231, arXiv: 1708.09422, bibcode: 2018MNRAS.476.1021P. You're recommended and kindly requested to refer to that paper when using this code.

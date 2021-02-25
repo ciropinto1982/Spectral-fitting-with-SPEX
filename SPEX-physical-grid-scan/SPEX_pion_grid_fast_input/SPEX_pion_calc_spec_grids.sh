@@ -80,7 +80,7 @@ line_width=100          # normally 100 , 1000 , 10000 , etc    # adopting narrow
 xi_min=0.0              # normally 3.0, do not change this (unless required) ionisation param
 xi_max=6.01             # normally 5.01 do not change this (unless required) Python needs +.01
 
-hd_min=-7               # normally 1E-7, do not change this (unless required) H volume density
+hd_min=-14              # normally 1E-7, do not change this (unless required) H volume density
 hd_max=-2               # normally 1E-3, do not change this (unless required)
 hd_val=-14              # because it's faster, here we adopt a constant low H volume/electron density
 

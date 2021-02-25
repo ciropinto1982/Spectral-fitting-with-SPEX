@@ -363,6 +363,8 @@ c
 par sh f
 
 ###################### Plot the calculations ######################
+#
+# Use "p de null" if you do not want to open plotting windows or run in background / screen mode
 
 p de xs
 p ty mo

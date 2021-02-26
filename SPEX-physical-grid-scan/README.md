@@ -8,7 +8,7 @@ These automated codes take advantage from SPEX knowledge of atomic lines cross s
 
 3) SPEX_ciez_grid_fast_input.sh is built on SPEX's model CIE (emission lines from collisionally-ionised plasma). It adopts the kT logarithmic grid stored in the file Val_CIE_T_loggrid.txt.
 
-4) SPEX's model HOT (absorption lines from collisionally-ionised plasma) is yet to be uploaded.
+4) SPEX_hotz_grid_fast_input.sh is built on SPEX's model HOT (absorption lines from collisionally-ionised plasma). It adopts the kT logarithmic grid stored in the file Val_CIE_T_loggrid.txt.
 
 5) SPEX-models-flowchart.jpeg provides an overview on the SPEX physical model scans and their architecture.
 

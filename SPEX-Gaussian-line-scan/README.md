@@ -1,4 +1,4 @@
-Tutorial for running a Gaussian line scan in SPEX
+#Tutorial for running a Gaussian line scan in SPEX
 
 The example shown here fits a low-flux spectrum of AGN IRAS 13223-3809. Follow the order of the following tasks:
 

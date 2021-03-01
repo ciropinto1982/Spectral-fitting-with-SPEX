@@ -17,6 +17,10 @@
 ###
 ### The spectra must be converted to SPEX format from OGIP via TRAFO
 ### before loading the spectra and their responses into SPEX
+###
+### Here we show how to fit the X-ray spectrum (e.g. XMM/EPIC-pn) of a bright X-ray
+### source, such as an X-ray binary or ULX found in a nearby (1.9 Mpc) galaxy,
+### assuming a powerlaw continuum corrected for redshift and interstellar absorption.
 
 ### Step 1: load the data (spectrum.spo and response.res) and remove useless bins
 
@@ -52,9 +56,9 @@
  p cap x lw 3
  p
  
-### Step 3: adopt a distance for your source, e.g. 1.9 Kiloparsec
+### Step 3: adopt a distance for your source, e.g. 1.9 Megaparsec
   
- dist 1.9 kpc
+ dist 1.9 mpc
 
 ### Step 4: create a model of powerlaw corrected by the source redshift (e.g. 0.000474)
 ### the powerlaw is also absorbed by neutral gas (our Galaxy + intrinsic to the source)
@@ -72,7 +76,7 @@
 ### Define some parameters for the components, limit their range of value
 ### ... or freeze the parameters
 ### "parameter sector component acronym status frozen "
-### Freeze the temperature of the (quasi-neutral) gas to 5e-4 keV
+### Freeze the temperature of the (quasi-neutral) gas to 1e-5 keV
 ### Range the slope of the powerlaw between 1 and 5 (if beyond them is not physical)
  
  par 1 1 z v 0.000474
@@ -80,7 +84,8 @@
  par 1 1 z status frozen
  
  par 1 2 nh v 1e-3
- par 1 2 t  v 5e-4
+ par 1 2 t  r 1e-5 1
+ par 1 2 t  v 1e-5
  par 1 2 t  s f
  
  par 1 3 no v 20000

@@ -4,8 +4,8 @@ The example shown here fits a low-flux spectrum of AGN IRAS 13223-3809. Follow t
 
 1) spex_continuum_model_fit.com
 
-Loads the XMM / pn and RGS spectra, creates a continuum model and fits the data. This is necessary also to understand the energy range over which to run the Gaussian scan.
-
+Loads the XMM / pn and RGS spectra, creates a continuum model and fits the data. This is necessary also to understand the energy range over which to run the Gaussian scan. Note that this file needs the full paths to the data (spectra) and models if you wish to execute it in a different directory.
+ 
 Output files: spex_model_RHPB.com, spex_model_RHPBD2L.com, spex_model_RHPBD2LG.com, IRAS_EPIC_RGS_1_OF_10_FIT.ps, IRAS_EPIC_RGS_1_OF_10_FIT.pdf
 
 2) pyth_energy_loggrid_make.py

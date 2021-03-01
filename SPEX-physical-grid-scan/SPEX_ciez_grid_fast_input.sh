@@ -13,6 +13,7 @@
 ### 1) A SPEX executable file that loads spectra, bestfit continuum model. Plots are optional
 ###    The addition of a CIE component is done here and coupled with the Galactic ISM absorption
 ###    For instance, if the components are: hot, bb, dbb, cie then should be "com rel 2:4 1"
+###    IMPORTANT: data & executed models in the executable must have full-path for SPEX to find them!
 ###
 ### 2) No Ionisation balance pre-calculation is needed as CIE is quick to be calculated and fitted.
 ###    But the USER has to provide a grid of kT values (ideally log-spaced) in a file called:
@@ -205,11 +206,11 @@ echo "com rel 2:4 1"                        >> ${routine_file} # Absorb continuu
 echo "com rel 5 6,1"                        >> ${routine_file} # Redshift and absorb the CIE component
 echo " "                                    >> ${routine_file}
 echo "par 1:4 ${NC} no  v ${nh_start}"      >> ${routine_file} # Chose cie param for a startup model
-echo "par 1:4 ${NC} t   v ${xi_start}"      >> ${routine_file}
-echo "par 2:4 ${NC} no:vm cou 1 ${NC} no:vm">> ${routine_file}
+echo "par 1:4 ${NC} t   v ${xi_start}"      >> ${routine_file} # Couple parameters between the CIE for
+echo "par 2:4 ${NC} no:v cou 1 ${NC} no:v"  >> ${routine_file} # the models of pn, MOS 1-2, and RGS.
 echo "par 1:4 ${NC} v   r 0.0 1e5"          >> ${routine_file}
 echo "par 1   ${NC} v   v ${width}"         >> ${routine_file}
-echo "par 1   ${NC} t:v s f"                >> ${routine_file}
+echo "par 1   ${NC} t:v s f"                >> ${routine_file} # kT and V_RMS must be frozen
 echo " "                                    >> ${routine_file}
 echo "par 1:4 6 flag v 1"                   >> ${routine_file} # Red/Blue-shift for the CIE component
 echo "par 2:4 6 z:fl c 1 6 z:fl"            >> ${routine_file} # Flag=1 means redshift is velocity

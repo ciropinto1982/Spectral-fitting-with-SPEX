@@ -59,9 +59,9 @@ echo "Running SPEX onto ${OMP_NUM_THREADS} threads / cores"
 
 SOURCE=SOURCE_NAME # Provide the source name: IMPORTANT is often used as the PATH-TO-DIR
 
-type=pion          # among: xabs pion cie (directory) random choice for your launch-DIR
+type=pion          # among: xabs pion cie (directory) to choose name for launch directory
 
-type_model=pion    # among: xabs pion cie (models)
+type_model=pion    # among: xabs pion cie (models), in this case it's "pion" of course
 
 NC=5               # number of component for which grid runs
 

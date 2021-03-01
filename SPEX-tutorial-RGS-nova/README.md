@@ -1,4 +1,4 @@
-# SPEX tutorial to fit complex and line-rich RGS spectra of novae and supersoft sources
+# SPEX tutorial to fit complex, line-rich, RGS spectra of novae & SS sources
 
 0) Download SPEX from link below. You’ll need XQUARTZ or X11 for plotting windows.
 

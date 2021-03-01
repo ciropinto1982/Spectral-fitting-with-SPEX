@@ -13,10 +13,12 @@
 ### 1) A SPEX executable file that loads spectra, bestfit continuum model. Plots are optional
 ###    At the bottom of such file you will need to add your multiplicative model to be coupled
 ###    For instance, if the components are: bb, dbb, xabs then should be "com rel 1:2 3"
+###    IMPORTANT: data & executed models in the executable must have full-path for SPEX to find them!
 ###
 ### 2) Ionisation balance calculation: xabs require a pre-calculated photo-ionisation balance
 ###    SPEX's default is based on Seyfert 1 AGN NGC 5548. You can provide your own ion-bal file
-###    by typing "par sec comp file av xabsinput_file". To learn how to produce it from the SED, see:
+###    by typing "par sec comp col av xabsinput_file". To learn how to produce it from the SED
+###    and to correct for any issues due to the computation at low temperatures or log xi, see:
 ###    https://github.com/ciropinto1982/Spectral-fitting-with-SPEX/tree/master/SPEX-ionisation-balance
 ###
 ### 3) Initial NH values tested for some ranges of log xi. These are ad-hoc pre-tested initial values
@@ -204,7 +206,7 @@ echo " fit "                                              >> ${routine_file} # i
 echo " fit "                                              >> ${routine_file} # and NH parameters
 #echo " fit "                                              >> ${routine_file}
 #echo " fit "                                              >> ${routine_file}
-#echo " par sh f "                                         >> ${routine_file}
+#echo " par sh fr"                                         >> ${routine_file}
 #echo " "                                                  >> ${routine_file}
 #echo "system exe \"rm spex_lower_stat.com\" "             >> ${routine_file} # delete old errors
 #echo "err 1 ${NC} nh "                                    >> ${routine_file} # run error calc
@@ -216,12 +218,12 @@ echo " fit "                                              >> ${routine_file} # a
 #echo " fit "                                              >> ${routine_file}
 #echo " fit "                                              >> ${routine_file}
 #echo " fit "                                              >> ${routine_file}
-#echo " par sh f "                                         >> ${routine_file}
+#echo " par sh fr"                                         >> ${routine_file}
 #echo " "                                                  >> ${routine_file}
 #echo "system exe \"rm spex_lower_stat.com\" "             >> ${routine_file} # delete old errors
 echo " "                                                             >> ${routine_file}
-echo "log out ${DIR_outgrid}/${type_model}_${width}_${xi_start}_${k} over" >> ${routine_file}
-echo "par sh f"                                                      >> ${routine_file} # save
+echo "log out ${DIR_outgrid}/${type}_${width}_${xi_start}_${k} over" >> ${routine_file}
+echo "par sh fr"                                                     >> ${routine_file} # save
 echo "log close out"                                                 >> ${routine_file} # each fit
 echo " "                                                             >> ${routine_file} # results
 

@@ -13,6 +13,7 @@
 ### 1) A SPEX executable file that loads spectra, bestfit continuum model. Plots are optional
 ###    At the bottom of such file you will need to add your multiplicative model to be coupled
 ###    For instance, if the components are: bb, dbb, hot then should be "com rel 1:2 3"
+###    IMPORTANT: data & executed models in the executable must have full-path for SPEX to find them!
 ###
 ### 2) No Ionisation balance pre-calculation is needed as HOT is quick to be calculated and fitted.
 ###    But the USER has to provide a grid of kT values (ideally log-spaced) in a file called:
@@ -188,6 +189,9 @@ echo " "                                                    >> ${routine_file}  
 echo "par 1 ${NC} nh v ${nh_start} "   >> ${routine_file}     # Chose xabs param for a startup model
 echo "par 1 ${NC} t  v ${xi_start} "   >> ${routine_file}
 echo "par 1 ${NC} v  v ${width}    "   >> ${routine_file}
+echo "par 1 ${NC} t  s f           "   >> ${routine_file}     # kT must to be frozen during the fit
+echo "par 1 ${NC} v  s f           "   >> ${routine_file}     # v  must to be frozen during the fit
+echo "par 1 ${NC} zv s f           "   >> ${routine_file}     # zv must to be frozen during the fit
 echo " "                               >> ${routine_file}
 echo "par wri ${startup_model} over "  >> ${routine_file}     # Saving startup model (NH initialise)
 echo " "                               >> ${routine_file}

@@ -13,6 +13,7 @@
 ### 1) A SPEX executable file that loads spectra, bestfit continuum model. Plots are optional
 ###    The addition of a pion file-model component is done here and coupled to Galactic ISM absorption
 ###    For instance, if the components are: hot (ISM), bb, dbb, pmf then should be "com rel 2:4 1"
+###    IMPORTANT: data & executed models in the executable must have full-path for SPEX to find them!
 ###
 ### 2) Ionisation balance calculation: pion require a pre-calculated photo-ionisation balance
 ###    SPEX's default is based on Seyfert 1 AGN NGC 5548. You can provide your own ion-bal file
@@ -242,7 +243,7 @@ echo "com rel 2:4 1"                        >> ${routine_file} # Continuum absor
 echo "com rel 5 6,1"                        >> ${routine_file} # PION PMF redshifted, absorbed by ISM
 echo " "                                    >> ${routine_file}
 echo "par 1:4 ${NC} norm s  t"              >> ${routine_file} # Chose parameters for a startup model
-echo "par 1:4 ${NC} norm v  ${nh_start}"    >> ${routine_file}
+echo "par 1:4 ${NC} norm v  ${nh_start}"    >> ${routine_file} # Pair model par for RGS, MOS1-2 and pn
 echo "par 1:4 ${NC} file av ${log_xi_file}" >> ${routine_file} # load PION file model calculated spec
 echo "par 2:4 ${NC} no:f cou 1 ${NC} no:f"  >> ${routine_file}
 echo " "                                    >> ${routine_file}
@@ -264,13 +265,13 @@ echo "par 1:4 7 xi s t "                    >> ${routine_file}
 echo "par 1:4 7 v  s f "                    >> ${routine_file}
 echo "par 1:4 7 zv s t "                    >> ${routine_file}
 echo "par 1:4 7 nh r  1e-3   1.0  "         >> ${routine_file}
-echo "par 1:4 7 xi r  3.85   4.55 "         >> ${routine_file}
+echo "par 1:4 7 xi r  1.0    6.0  "         >> ${routine_file}
 echo "par 1:4 7 v  r  100    1e4  "         >> ${routine_file}
-echo "par 1:4 7 zv r -58000 -50000"         >> ${routine_file}
-echo "par 1:4 7 nh v 1.9e-2 "               >> ${routine_file}
-echo "par 1:4 7 xi v 4.28 "                 >> ${routine_file}
-echo "par 1:4 7 v  v ${width} "             >> ${routine_file}
-echo "par 1:4 7 zv v -54350 "               >> ${routine_file}
+echo "par 1:4 7 zv r -1e5    0"             >> ${routine_file}
+echo "par 1:4 7 nh v  0.1 "                 >> ${routine_file} # These are just casual values, which 
+echo "par 1:4 7 xi v  3.0 "                 >> ${routine_file} # will change from source to source
+echo "par 1:4 7 v  v ${width} "             >> ${routine_file} # just run the "xabs" fast scan first!
+echo "par 1:4 7 zv v -30000 "               >> ${routine_file}
 echo " "                                    >> ${routine_file}
 echo "par wri ${startup_model} over"        >> ${routine_file} # Saving startup model (PMF initialise)
 echo " "                                    >> ${routine_file}

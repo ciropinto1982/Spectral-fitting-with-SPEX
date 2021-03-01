@@ -172,8 +172,12 @@ echo " "                                                     >> ${routine_file}
 # and we have relate them: "com rel 2:4 5,1" i.e. first absorbed by xabs and then Galactic ism (hot)
 
 echo "par 1 ${NC} nh v ${nh_start} "   >> ${routine_file}     # Chose xabs param for a startup model
+echo "par 1 ${NC} nh s t           "   >> ${routine_file}     # NH may be free or frozen (see above)
 echo "par 1 ${NC} xi v ${xi_start} "   >> ${routine_file}
+echo "par 1 ${NC} xi s f           "   >> ${routine_file}     # Log xi must be frozen during fit
 echo "par 1 ${NC} v  v ${width}    "   >> ${routine_file}
+echo "par 1 ${NC} v  s f           "   >> ${routine_file}     # Velocity dispersion must be frozen
+echo "par 1 ${NC} zv s f           "   >> ${routine_file}     # Velocity displacement must be frozen
 echo " "                               >> ${routine_file}
 echo "par wri ${startup_model} over "  >> ${routine_file}     # Saving startup model (NH initialise)
 echo " "                               >> ${routine_file}

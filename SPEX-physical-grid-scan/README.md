@@ -1,6 +1,6 @@
-# Automated multi-D SPEX codes to search for outflows in X-ray plasmas
+# Automated m-D SPEX codes to search for outflows in X-ray spectra
 
-These automated codes take advantage from SPEX knowledge of atomic lines cross section and energy centroids as well as relatives strength according to the given ionisation balance (and elemental abundances). The routines are optimised to speed up the spectral fits over a well defined deep grid of points in the paramers space (e.g. log_xi, kT, N_H, n_e, v_LOS, etc.) by adopting an ad-hoc structure and parameters initialisation. The main difference between photo- and collisionally-ionised codes is the need for a broadband band spectral energy distribution (SED) or ionising radiation field for the former.
+These automated and multi-domensional codes take advantage from SPEX knowledge of atomic lines cross section and energy centroids as well as relatives strength according to the given ionisation balance (and elemental abundances). The routines are optimised to speed up the spectral fits over a well defined deep grid of points in the paramers space (e.g. log_xi, kT, N_H, n_e, v_LOS, etc.) by adopting an ad-hoc structure and parameters initialisation. The main difference between photo- and collisionally-ionised codes is the need for a broadband band spectral energy distribution (SED) or ionising radiation field for the former.
 
 1) SPEX_pion_grid_fast_input directory has modules to build SPEX's model PION (emission/absorption lines from photo-ionised plasma).
 

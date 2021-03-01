@@ -19,8 +19,9 @@
 ### before loading the spectra and their responses into SPEX
 ###
 ### Here we show how to fit the X-ray spectrum (e.g. XMM/EPIC-pn) of a bright X-ray
-### source, such as an X-ray binary or ULX found in a nearby (1.9 Mpc) galaxy,
+### source, such as an X-ray binary or ULX found in a nearby (2 Mpc) galaxy,
 ### assuming a powerlaw continuum corrected for redshift and interstellar absorption.
+### Further steps below show how to add blackbody and other components.
 
 ### Step 1: load the data (spectrum.spo and response.res) and remove useless bins
 
@@ -58,7 +59,7 @@
  
 ### Step 3: adopt a distance for your source, e.g. 1.9 Megaparsec
   
- dist 1.9 mpc
+ dist 2 mpc
 
 ### Step 4: create a model of powerlaw corrected by the source redshift (e.g. 0.000474)
 ### the powerlaw is also absorbed by neutral gas (our Galaxy + intrinsic to the source)

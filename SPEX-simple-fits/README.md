@@ -7,3 +7,5 @@ This is a work-in-progress directory that contains simple example of how to perf
 - "SPEX_fit_example_XRB.com" shows how to fit the X-ray spectrum (e.g. XMM/EPIC-pn) of a bright X-ray source, such as an X-ray binary or ULX found in a nearby (2 Mpc) galaxy, assuming a powerlaw continuum corrected for redshift and interstellar absorption. Additional steps and exercises are shown in order to test more complex continuum models.
 
 - "SPEX_fit_example_SS.com" shows how to fit the high-resolution grating spectrum (e.g. XMM/RGS or Chandra/HETGS-LETGS) of a bright X-ray source, such as nova or another supersoft source, assuming a blackbody continuum corrected for redshift and interstellar absorption + plasma models of photoionised (wind-like) and collisionally ionised (shocked) ejecta. On this GitHub there's a full tutorial on this.
+
+License: This user-friendly public code was developed for and published in the paper Pinto et al. (2017), DOI: 10.1093/mnras/stx641, arXiv: 1612.05569, bibcode: 2017MNRAS.468.2865P. You may refer to this when using this code, especially to compare the spectra and lightcurves that you make using it.

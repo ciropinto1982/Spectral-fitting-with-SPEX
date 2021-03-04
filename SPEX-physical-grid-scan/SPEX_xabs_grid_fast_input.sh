@@ -35,7 +35,7 @@
 ###           B) call SPEX, load data and bestfit (continuum) model and add the xabs on top of it.
 ###           C) then launch the grid routine within SPEX and save the fit for each individual point
 ###           D) Finally read C-stat from each fit into a large file containing all the  param space
-###              You need to update line 276 with the exact xabs component number (here 5 was adopted)
+###              You need to update line 282 with the exact xabs component number (here 5 was adopted)
 ###
 ### 6) OUTPUT: 3 Table files containing the results as delta C-stat or NH for each (xi,zv,width) point
 ###            1 two-column file (with a header) and 2 matrix-files for the DCstat and NH 3D contours.
@@ -173,6 +173,7 @@ echo " "                                                     >> ${routine_file}
 
 echo "par 1 ${NC} nh v ${nh_start} "   >> ${routine_file}     # Chose xabs param for a startup model
 echo "par 1 ${NC} nh s t           "   >> ${routine_file}     # NH may be free or frozen (see above)
+echo "par 1 ${NC} xi r 0 6        "    >> ${routine_file}     # to be double checked!
 echo "par 1 ${NC} xi v ${xi_start} "   >> ${routine_file}
 echo "par 1 ${NC} xi s f           "   >> ${routine_file}     # Log xi must be frozen during fit
 echo "par 1 ${NC} v  v ${width}    "   >> ${routine_file}
@@ -194,7 +195,6 @@ echo " "                                                  >> ${routine_file}
 #echo "p cap lt disp t "                                   >> ${routine_file} # to update plots
 #echo " "                                                  >> ${routine_file}
 echo "par 1 ${NC} nh v ${nh_start}"                       >> ${routine_file} # update xabs paramet.
-echo "par 1 ${NC} xi r 0 6"                               >> ${routine_file} # to be double checked!
 echo "par 1 ${NC} xi v ${xi_start}"                       >> ${routine_file}
 echo "par 1 ${NC} v  v ${width}   "                       >> ${routine_file}
 echo "par 1 ${NC} zv v ${k}       "                       >> ${routine_file}

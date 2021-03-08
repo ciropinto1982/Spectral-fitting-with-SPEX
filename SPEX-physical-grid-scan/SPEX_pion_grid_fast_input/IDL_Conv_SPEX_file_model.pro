@@ -37,7 +37,9 @@ for loop=0, n_elements(PION_loop_results)-1 do begin
 
  oplot,energy[index],flux[index], color=150, linestyle=2
  
- Matrix=[transpose(energy[index]),transpose(flux[index])*5e-4]
+ ; Factor 5e-4 (below) to ignore if you already adopted the correct normalisation when running PION grid calc!
+ 
+ Matrix=[transpose(energy[index]),transpose(flux[index])*5e-4] 
  
   openw,lun,fname,/get_lun
   printf, lun, n_elements(index)

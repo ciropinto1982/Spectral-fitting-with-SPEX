@@ -44,6 +44,9 @@
 ###
 ### IMPORTANT: this codes also uses PYTHON and IDL. Needs some editing to avoid using one or the other
 ###
+### WARNING: The SED for PION must have NO MORE THAN 1024 POINTS (for Mac SPEX and some Linux release. 
+###          otherwise you might incur in segment fault (forrtl: severe (174): SIGSEGV), PION crashes.
+###
 ###    License: This public code was developed for and published in the paper Pinto et al. (2020a),
 ###        DOI: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P.
 ###        You're recommended and kindly requested to refer to that paper when using this code.

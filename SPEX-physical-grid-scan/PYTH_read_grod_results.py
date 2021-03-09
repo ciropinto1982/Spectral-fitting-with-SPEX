@@ -16,10 +16,10 @@ from matplotlib.ticker import MaxNLocator
 T=np.loadtxt('xabs_XXX_kms_final_3D_CS.dat')
 T=np.array(T)
 
-T=np.max(T)-T # Calculate the Delta C-Stat from the maximum C-STAT (from continuum)
+T=np.max(T)-T # Calculate the Delta C-Stat from the maximum C-STAT (from continuum) or provide Continuum C-STAT
 
-INDEX_TLE0=np.where((T < 0)) # If you want to remove negative points from bad fits.
-T[INDEX_TLE0]=0              # If you want to remove negative points from bad fits.
+INDEX_TLE0=np.where((T < 0)) # to remove negative points from bad fits (if you provide Continuum-only CS).
+T[INDEX_TLE0]=0              # to remove negative points from bad fits (if you provide Continuum-only CS).
 
 xi_min=0        # minimum log xi value used by the grid (to be updated)
 xi_max=6.01     # maximum log xi value used by the grid + 0.01 (or the last point be ignored)

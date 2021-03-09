@@ -10,6 +10,9 @@
 ### Manual:   http://var.sron.nl/SPEX-doc/manualv3.02/manual.html
 ### Cookbook: http://var.sron.nl/SPEX-doc/cookbookv3.0/cookbook.html
 ### Minihelp: https://www.sron.nl/plugins/content/moskt/Browse.php?fDocumentId=87435
+###
+### WARNING: The SED for PION calculation must have NO MORE THAN 1024 POINTS (when using Mac-related SPEX and some Linux release. 
+###          otherwise you might incur in the following segment fault (forrtl: severe (174): SIGSEGV) and PION crashes.
 
 ### Step 1: define name for the input SED file (1 header line, then two column in units of keV, phot/s/keV)
 ###         define name for the output file containint the xi-T balance and the H-C rates

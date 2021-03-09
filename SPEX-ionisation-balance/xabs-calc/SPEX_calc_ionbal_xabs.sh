@@ -33,6 +33,10 @@
 ### IMPORTANT: To have a sufficiently broad energy band, xabsinput adds a value of 10^{-10} at energies of 10^{-8} and 10^9 Ryd. 
 ###            Take care that the SED scaling would essentially imply 10^{-10} to be a very small value. 
 ###            The energies in the file should be in increasing order, and within the 10^{-8} and 10^9 Ryd interval.
+###
+### WARNING: The SED for PION calculation must have NO MORE THAN 1024 POINTS (when using Mac-related SPEX and some Linux release. 
+###          otherwise you might incur in the following segment fault (forrtl: severe (174): SIGSEGV) and PION crashes.
+
 
 SED=SED_ngc1313_Ry_Jy_ge1024bin.dat
 ABU=abundances.txt

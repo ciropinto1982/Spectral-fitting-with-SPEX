@@ -354,6 +354,7 @@ p clo 2
 ###
 ### Exercise 2 : do you get any improvement if you substitute mbb with a comptonisation (comt)?
 ###              to avoid degeneracy, couple comt's seed photon to TBB by "par 1 4 t0 cou 1 3 t"
+###              note that ULXs are very soft, you'd start fitting with comt t1=1 and comt tau=1.
 ###
 ### Exercise 3 : calculate uncertainties on parameters e.g. on the NH: "err 1 2 nh"
 ###

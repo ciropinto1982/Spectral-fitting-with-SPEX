@@ -12,6 +12,6 @@ These automated and multi-domensional codes take advantage from SPEX knowledge o
 
 5) SPEX-models-flowchart.jpeg provides an overview on the SPEX physical model scans and their architecture.
 
-6) PYTH_read_grod_results.py is a simple PYTHON script that reads and plots SPEX results from an automated grid. This example shows how to plot Delta C-stat probability contours.
+6) PYTH_read_grid_results.py is a simple PYTHON script that reads and plots SPEX results from an automated grid. This example shows how to plot Delta C-stat probability contours.
 
 *License -* All these codes have been developed for and published in the paper Pinto et al. (2020b), doi: 10.1093/mnras/staa118, arXiv: 1911.09568, bibcode: 2020MNRAS.492.4646P. You're recommended and kindly requested to refer to that paper when using this code.

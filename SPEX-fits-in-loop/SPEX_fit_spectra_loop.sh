@@ -23,7 +23,7 @@
 ####    License: This public code was developed for and published in the paper Pinto et al. (2017),               ####
 ####    DOI: 10.1093/mnras/stx641, arXiv: 1612.05569, bibcode: 2017MNRAS.468.2865P.                               ####
 ####    You're recommended and kindly requested to refer to that paper when using this code,                      ####
-####    especially since you might want to compare your results onto NGC 55 ULX-1 (XMM obsid: 0655050101)         ####
+####    especially since you might want to compare your results onto NGC 55 ULX-1 (XMM obsid: several analysed)   ####
 ####                                                                                                              ####
 ######################################################################################################################
 

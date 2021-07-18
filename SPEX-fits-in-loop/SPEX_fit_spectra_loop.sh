@@ -8,9 +8,7 @@
 ####                                                                                                              ####
 #### 2) Read the available exposures or obsid names                                                               ####
 ####                                                                                                              ####
-#### 3) For each it creates a grid of AMOL compound combinations that can change and are stored in a SPEX routine ####
-####                                                                                                              ####
-#### 4) For each it opens SPEX, load data and create a continuum (redshidted and absorption corrected) model      ####
+#### 3) For each it opens SPEX, load data and create a continuum (redshidted and absorption corrected) model      ####
 ####            (here the continuum adopted is a soft blackbody and a hard comtpon-modified blacbbody disk)       ####
 ####            (this continuum is ideal for ULXs but can be easily modified by adding other components)          ####
 ####             then it fits the EPIC PN and MOS spectra (with the latter with a free overall normalisation)     ####
@@ -18,7 +16,7 @@
 ####             uncertainties are calculated for all parameters along with Bolometric and X-ray luminosities     ####
 ####             plots are also created (in POSTSCRIPT) and converted to PDF format                               ####
 ####                                                                                                              ####
-#### 5) For each obsid it reads the result (parameter & errors) and stored them in the final file as table rows   ####
+#### 4) For each obsid it reads the result (parameter & errors) and stored them in the final file as table rows   ####
 ####                                                                                                              ####
 ####    License: This public code was developed for and published in the paper Pinto et al. (2017),               ####
 ####    DOI: 10.1093/mnras/stx641, arXiv: 1612.05569, bibcode: 2017MNRAS.468.2865P.                               ####

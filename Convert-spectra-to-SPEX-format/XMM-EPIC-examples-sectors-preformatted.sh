@@ -27,6 +27,9 @@
 ### Once loaded in SPEX via e.g. "data SEC3_REG6_PN_MOS_spec SEC3_REG6_PN_MOS_spec"
 ### you will need to define the number of sectors before creating any model by typing
 ### the command "sector new" for each new sector, in this case twice (as there are 3 in total).
+###
+### NOTE: with the new SPEX version 3.07 you need to answer about the derivatives of the matrix
+###       and better chose a non partiotioning of the matrix (option 1 instead of options 2,3)
 
 P1=OBSERVATION1_PN_spec
 P2=OBSERVATION2_PN_spec

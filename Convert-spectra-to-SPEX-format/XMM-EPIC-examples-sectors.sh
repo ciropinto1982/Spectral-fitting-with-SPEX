@@ -35,6 +35,9 @@
 ### Once loaded in SPEX via e.g. "data SEC5_REG5_PN_grp25 SEC5_REG5_PN_grp25"
 ### you will need to define the number of sectors before creating any model by typing
 ### the command "sector new" for each new sector, in this case 4 times (as there are 5 in total).
+###
+### NOTE: with the new SPEX version 3.07 you need to answer about the derivatives of the matrix
+###       and better chose a non partiotioning of the matrix (option 1 instead of options 2,3)
 
 file_spectrum1=${DIR_OBS1}/PN_src_spec_grp25
 file_spectrum2=${DIR_OBS2}/PN_src_spec_grp25

@@ -23,6 +23,9 @@
 ###
 ### When providing the file_names for response and spectrum do not add the SPO/RES extensions,
 ### the same thing applies when loading them into SPEX (data resp_file spec_file)
+###
+### NOTE: with the new SPEX version 3.07 you need to answer about the derivatives of the matrix
+###       and better chose a non partiotioning of the matrix (option 1 instead of options 2,3)
 
 
 echo "Extracting information and exposure detail from the RGS 1 ans 2 eventlist files:"
@@ -47,11 +50,11 @@ trafo << EOF
 10000
 3
 16
-`ls ${did}R1${otype}${expno1}SRSPEC100${srcid}.FIT`
+${did}R1${otype}${expno1}SRSPEC100${srcid}.FIT
 y
-`ls ${did}R1${otype}${expno1}BGSPEC100${srcid}.FIT`
+${did}R1${otype}${expno1}BGSPEC100${srcid}.FIT
 y
-`ls ${did}R1${otype}${expno1}RSPMAT100${srcid}.FIT`
+${did}R1${otype}${expno1}RSPMAT100${srcid}.FIT
 no
 0
 ULX1_rgs1_expbkg
@@ -64,11 +67,11 @@ trafo << EOF
 10000
 3
 16
-`ls ${did}R2${otype}${expno2}SRSPEC100${srcid}.FIT`
+${did}R2${otype}${expno2}SRSPEC100${srcid}.FIT
 y
-`ls ${did}R2${otype}${expno2}BGSPEC100${srcid}.FIT`
+${did}R2${otype}${expno2}BGSPEC100${srcid}.FIT
 y
-`ls ${did}R2${otype}${expno2}RSPMAT100${srcid}.FIT`
+${did}R2${otype}${expno2}RSPMAT100${srcid}.FIT
 no
 0
 ULX1_rgs2_expbkg
@@ -83,11 +86,11 @@ trafo << EOF
 100000
 3
 16
-`ls ${did}R1${otype}${expno1}SRSPEC200${srcid}.FIT`
+${did}R1${otype}${expno1}SRSPEC200${srcid}.FIT
 y
-`ls ${did}R1${otype}${expno1}BGSPEC200${srcid}.FIT`
+${did}R1${otype}${expno1}BGSPEC200${srcid}.FIT
 y
-`ls ${did}R1${otype}${expno1}RSPMAT200${srcid}.FIT`
+${did}R1${otype}${expno1}RSPMAT200${srcid}.FIT
 no
 0
 ULX1_rgs1_expbkg_o2
@@ -100,11 +103,11 @@ trafo << EOF
 100000
 3
 16
-`ls ${did}R2${otype}${expno2}SRSPEC200${srcid}.FIT`
+${did}R2${otype}${expno2}SRSPEC200${srcid}.FIT
 y
-`ls ${did}R2${otype}${expno2}BGSPEC200${srcid}.FIT`
+${did}R2${otype}${expno2}BGSPEC200${srcid}.FIT
 y
-`ls ${did}R2${otype}${expno2}RSPMAT200${srcid}.FIT`
+${did}R2${otype}${expno2}RSPMAT200${srcid}.FIT
 no
 0
 ULX1_rgs2_expbkg_o2
@@ -131,7 +134,7 @@ trafo << EOF
 10000
 3
 16
-`ls rgs_stacked_source_spectrum.fits`
+rgs_stacked_source_spectrum.fits
 y
 no
 0

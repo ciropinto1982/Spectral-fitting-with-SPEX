@@ -17,6 +17,9 @@
 ###
 ### When providing the file_names for response and spectrum do not add the SPO/RES extensions,
 ### the same thing applies when loading them into SPEX (data resp_file spec_file)
+###
+### NOTE: with the new SPEX version 3.07 you need to answer about the derivatives of the matrix
+###       and better chose a non partiotioning of the matrix (option 1 instead of options 2,3)
 
 echo "Converting ungrouped EPIC-PN spectrum to SPEX format:"
 

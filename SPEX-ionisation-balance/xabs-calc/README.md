@@ -9,3 +9,8 @@ Loads the SED from the template file SED_ngc1313_Ry_Jy_ge1024bin.dat, calculates
 2) python_plot_ionbal.py
 
 Reads the (log_xi, kT) results from the file xabs_inputfile_corr1_cut.dat and plots the ionisation balance in the file plot_xi_T_curve.pdf, the stability S curve in plot_xi_psi_curve.pdf, respectively.
+
+3) python_plot_ionbal.py
+
+Reads the ionic fractions from the individual outputs and plots them for each value of ionisation parameter.
+

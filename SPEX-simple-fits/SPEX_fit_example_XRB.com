@@ -22,6 +22,10 @@
 ### source, such as an X-ray binary or ULX found in a nearby (2 Mpc) galaxy,
 ### assuming a powerlaw continuum corrected for redshift and interstellar absorption.
 ### Further steps below show how to add blackbody and other components.
+###                                                                                                      
+###    If you want to chose the number of cores (parallelisaiton), before opening SPEX run the following:
+###    export OMP_NUM_THREADS=4                                                                          
+###    echo "SPEX: choosing number of cores / threads = ${OMP_NUM_THREADS}"                              
 
 ### Step 1: load the data (spectrum.spo and response.res) and remove useless bins
 

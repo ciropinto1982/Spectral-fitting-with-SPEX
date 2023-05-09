@@ -19,6 +19,10 @@
 ### NOTE 2: SPEX recognises simplified commands e.g. "plot type data" -> "p ty da" to speed typing up!           ###
 ### NOTE 3: SPEX is not case-sensitive. "plot ty da" and "PLOT TY DA" are equivalent commands                    ###
 ###                                                                                                              ###
+###    If you want to chose the number of cores (parallelisaiton), before opening SPEX run the following:        ###
+###    export OMP_NUM_THREADS=4                                                                                  ###
+###    echo "SPEX: choosing number of cores / threads = ${OMP_NUM_THREADS}"                                      ###
+###                                                                                                              ###
 ###    SPEX is available here: https://www.sron.nl/astrophysics-spex                                             ###
 ###    Manual:   http://var.sron.nl/SPEX-doc/manualv3.02/manual.html                                             ###
 ###    Cookbook: http://var.sron.nl/SPEX-doc/cookbookv3.0/cookbook.html                                          ###

@@ -1,11 +1,15 @@
 ### SPEX executable file: Open, plot and fit spectra with SPEX
-
+###
 ### Information:
 ###
 ### Each command can be loaded also individually
 ### or loaded outside as a ".sh" file via "spex<<EOF ... EOF"
 ###
 ### To open SPEX type: "spex"
+###                                                                                                      
+###    If you want to chose the number of cores (parallelisaiton), before opening SPEX run the following:
+###    export OMP_NUM_THREADS=4                                                                          
+###    echo "SPEX: choosing number of cores / threads = ${OMP_NUM_THREADS}"                              
 
 ### Step 1: load the data (response.res and spectrum.spo) and remove useless bins
 

@@ -15,4 +15,6 @@ This folder contains my codes that perform broadband modelling and line detectio
 
 - /SPEX-tutorial-RGS-nova/ provide a full tutorial to download XMM/RGS spectra, convert them to SPEX and fit them with SPEX with photoionised gas absorption models.
 
+- For a dedicated branch on the treatment of extended sources see: https://github.com/ciropinto1982/XMM-Newton-Data-Reduction/tree/main/Extended_sources
+
 The readers are recommended to refer to the SPEX manual https://www.sron.nl/astrophysics-spex/manual and the very useful SPEX cookbook filled with practical examples of how to run SPEX http://var.sron.nl/SPEX-doc/cookbookv3.00.00.pdf. SPEX can be downloaded from https://www.sron.nl/astrophysics-spex

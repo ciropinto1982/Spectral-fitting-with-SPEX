@@ -23,6 +23,7 @@
 ### assuming a powerlaw continuum corrected for redshift and interstellar absorption.
 ### Further steps below show how to add blackbody and other components.
 ###                                                                                                      
+###    IMPORTANT: SPEX is an automatically parallelised code which will use all CPU available!
 ###    If you want to chose the number of cores (parallelisaiton), before opening SPEX run the following:
 ###    export OMP_NUM_THREADS=4                                                                          
 ###    echo "SPEX: choosing number of cores / threads = ${OMP_NUM_THREADS}"                              

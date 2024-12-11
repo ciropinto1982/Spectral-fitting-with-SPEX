@@ -33,6 +33,11 @@
 ###    You're recommended and kindly requested to refer to that paper when using this code,                      ###
 ###    especially since you might want to compare your results onto NGC 55 ULX-1 (XMM obsid: 0655050101)         ###
 ###                                                                                                              ###
+###    IMPORTANT: SPEX is an automatically parallelised code which will use all CPU available!                   ###
+###    If you want to chose the number of cores (parallelisaiton), before opening SPEX run the following:        ###
+###    export OMP_NUM_THREADS=4                                                                                  ###
+###    echo "SPEX: choosing number of cores / threads = ${OMP_NUM_THREADS}"                                      ###
+###                                                                                                              ###
 ########################################## DATA MANAGEMENT #########################################################
 
 ### Step 1: load and manage the data (response and spectrum)

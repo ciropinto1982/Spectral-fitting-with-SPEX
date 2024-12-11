@@ -6,6 +6,11 @@
 #
 # but it can be done with any absorber e.g. "hot"
 # Bulk command: FCOV=0 suppress a whole absorber
+###                                                                                                      
+###    IMPORTANT: SPEX is an automatically parallelised code which will use all CPU available!           
+###    If you want to chose the number of cores (parallelisaiton), before opening SPEX run the following:
+###    export OMP_NUM_THREADS=4                                                                          
+###    echo "SPEX: choosing number of cores / threads = ${OMP_NUM_THREADS}"                              
 
 echo "Run SPEX to extract transmission of species"
 
